@@ -4,7 +4,7 @@
 /* raiz */
 :root,
 :root[data-theme='dark'] {
-    --cor-fundo: #6516b5;
+    --cor-fundo: #000000;
     --cor-texto: #ffffff;
     --menu-link: #ffffff;
 
@@ -161,6 +161,9 @@ botao menu mobile  ----- */
     align-items: center;
 }
 
+#home{
+    padding: 3.5rem 1rem;
+}
 
 /* Medidas Responsivas */
 @media (min-width: 768px) {
