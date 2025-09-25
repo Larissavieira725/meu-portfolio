@@ -28,9 +28,10 @@ html[data-theme='light'] .logo {
 
 /* Reset CSS - padronizar */
 /* Seletor Universal */
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -55,9 +56,10 @@ header {
     align-items: center;
     width: 100%;
     background: var(--cor-fundo);
-    border-bottom: 5px solid var(--cor-borda);
-    position: fixed;
-    z-index: 9999;
+    border-bottom: 2px solid var(--cor-borda);
+    position: fixed; /* Voltar */
+    z-index: 9999; /* Camadas */
+    padding: .5rem 1rem;
 }
 
 .menu-desktop {
@@ -151,7 +153,7 @@ botao menu mobile  ----- */
 }
 
 .logo {
-    width: 3.25rem; /* comprimento */
+    width: 2.5rem; /* comprimento */
     height: auto; /* altura */
 }
 
@@ -161,8 +163,19 @@ botao menu mobile  ----- */
     align-items: center;
 }
 
-#home{
-    padding: 3.5rem 1rem;
+#home {
+    padding: 7.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 /* Medidas Responsivas */
@@ -172,10 +185,34 @@ botao menu mobile  ----- */
         display: flex;
         min-width: 30%; /* alinhar o logo */
     }
+
     .btn-menu-mobile {
         display: none;
     }
+
     .header-toggle {
         min-width: 30%; /* alinhar o logo */
+    }
+
+    header {
+        padding: 1rem 6rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    #home {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}/* Fim min 768px */
+@media ( min-width: 1400px) {
+    h1 {
+        font-size: 6.5rem;
     }
 }
